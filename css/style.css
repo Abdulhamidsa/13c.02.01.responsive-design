@@ -761,7 +761,7 @@ footer a {
   }
   #contact_form .form_group:last-child {
     grid-area: item7;
-    justify-self: center;
+    justify-self: flex-start;
   }
   input[type="text"],
   input[type="email"] {
@@ -801,7 +801,7 @@ footer a {
   }
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 1024px) {
   html,
   body {
     overflow-x: hidden;
@@ -882,8 +882,10 @@ footer a {
   }
 
   #product article {
-    gap: 3rem;
+    gap: 5rem;
     justify-content: center;
+    flex-wrap: nowrap;
+
     margin-left: 0;
   }
   .graphic_text {
@@ -931,9 +933,95 @@ footer a {
     width: 350px;
     height: 350px;
   }
+  /* contact */
+  #team {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+  #team h2 {
+    text-align: center;
+  }
+  #team article {
+    justify-content: center;
+    flex-direction: row;
+    gap: 5rem;
+  }
+  .team_text {
+    margin-top: 2rem;
+    text-align: left;
+  }
+  .team_text li {
+    font-size: 1rem;
+  }
+  .team_text ul {
+    margin-bottom: 1.7rem;
+  }
+  .team_graphics img {
+    width: 250px;
+    height: 250px;
+  }
+  /* contact */
+  #contact {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  #contact h2 {
+    font-size: 1.5rem;
+  }
+  #contact p {
+    font-size: 1rem;
+  }
+  #contact_form {
+    margin: 2rem 0rem 2rem 2rem;
+  }
+  #contact_form :nth-child(2) {
+    align-self: flex-start;
+  }
+  #contact_form :nth-child(3) {
+    grid-area: item4;
+  }
+  #contact_form .form_group:last-child {
+    grid-area: item7;
+    justify-self: start;
+  }
+  input[type="text"],
+  input[type="email"] {
+    width: 380px;
+  }
+  textarea[name="Message"] {
+    width: 450px;
+  }
+  /* footer */
+  footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+  footer svg {
+    width: 100px;
+  }
+  footer > div {
+    padding-left: 0rem;
+    padding-top: 2rem;
+    align-self: center;
+  }
+  footer section {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding-right: 0rem;
+    gap: 2rem;
+    width: 100%;
+  }
+  footer h3 {
+    color: var(--secondary-color);
+  }
+  footer a {
+    color: var(--paragraph-color);
+  }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-  body {
+  /* body {
     overflow-x: hidden;
   }
   header .header_text h1 {
@@ -951,5 +1039,5 @@ footer a {
   .product_text article img {
     width: 240px;
     height: 240px;
-  }
+  } */
 }
